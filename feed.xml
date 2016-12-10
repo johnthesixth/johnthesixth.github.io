@@ -6,15 +6,15 @@
 </description>
     <link>http://burge.io/</link>
     <atom:link href="http://burge.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Oct 2016 06:55:18 -0500</pubDate>
-    <lastBuildDate>Tue, 18 Oct 2016 06:55:18 -0500</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 15:44:01 -0600</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 15:44:01 -0600</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>How to Change Your MySQL Password on Bluehost</title>
-        <description>&lt;h1 id=&quot;how-to-change-your-mysql-password-for-wordpress&quot;&gt;How to Change Your MySQL Password for Wordpress&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;how-to-change-your-mysql-password-for-wordpress&quot;&gt;How to Change Your MySQL Password for WordPress&lt;/h1&gt;
 
-&lt;p&gt;I recently had a client whose Wordpress site got hacked. It was a weird sort of hack, where only a small percentage of the site visitors reported suspicious activity. It was tough to reproduce, but after some digging I found more than 40 files with suspicious names.&lt;/p&gt;
+&lt;p&gt;I recently had a client whose WordPress site got hacked. It was a weird sort of hack, where only a small percentage of the site visitors reported suspicious activity. It was tough to reproduce, but after some digging I found more than 40 files with suspicious names.&lt;/p&gt;
 
 &lt;p&gt;I recommended &lt;a href=&quot;https://sucuri.net/website-security/malware-removal&quot; target=&quot;_blank&quot;&gt;Sucuri&lt;/a&gt; site cleanup services to my client, and they were able to get his site cleaned and running smoothly again. However, they didn’t take care of the necessary business of changing login and password information.&lt;/p&gt;
 
@@ -54,50 +54,30 @@
 10
 11
 12
-13
-14
-15
-16
-17
-18
-19
-20&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;/** The name of the database for WordPress */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_NAME'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'database_name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;...
+/** The name of the database for WordPress */
+define('DB_NAME', 'database_name');
 
-&lt;span class=&quot;sd&quot;&gt;/** MySQL database username */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_USER'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'database_username'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+/** MySQL database username */
+define('DB_USER', 'database_username');
 
-&lt;span class=&quot;sd&quot;&gt;/** MySQL database password */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_PASSWORD'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'database_password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+/** MySQL database password */
+define('DB_PASSWORD', 'database_password');
 
-&lt;span class=&quot;sd&quot;&gt;/** MySQL hostname */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_HOST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'localhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;sd&quot;&gt;/** Database Charset to use in creating database tables. */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_CHARSET'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'utf8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;sd&quot;&gt;/** The Database Collate type. Don't change this if in doubt. */&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'DB_COLLATE'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
+...&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you can probably imagine, the value following &lt;code class=&quot;highlighter-rouge&quot;&gt;DB_USER&lt;/code&gt; is the database username and the value following &lt;code class=&quot;highlighter-rouge&quot;&gt;DB_PASSWORD&lt;/code&gt; is the database password. Youll need these two values to change the database information.&lt;/p&gt;
 
 &lt;h2 id=&quot;changing-the-database-username-and-password&quot;&gt;Changing the Database Username and Password&lt;/h2&gt;
 
-&lt;h3 id=&quot;make-sure-you-know-which-database-you-want-to-change&quot;&gt;1. Make sure you know which database you want to change.&lt;/h3&gt;
-
-&lt;p&gt;If you have several accounts hosted on your site, you’ll see a number of databases, all with obscured names.&lt;/p&gt;
-
-&lt;p&gt;To find out the name of your database, you’ll need the value you pulled from the &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt; file above.&lt;/p&gt;
-
-&lt;h3 id=&quot;backup-your-database&quot;&gt;2. Backup your database.&lt;/h3&gt;
+&lt;h3 id=&quot;backup-your-database&quot;&gt;1. Backup your database.&lt;/h3&gt;
 
 &lt;p&gt;Bluehost gives you a few choices on how to do this; my recommendation is to just download the .sql database by using phpMyAdmin.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://my.bluehost.com/cgi/help/4&quot;&gt;Here are Bluehost’s directions&lt;/a&gt;, which give you multiple options. Here’s what I did:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://my.bluehost.com/cgi/help/4&quot; target=&quot;blank&quot;&gt;Here are Bluehost’s directions&lt;/a&gt;, which give you multiple options. Here’s what I did:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Log into your Bluehost cPanel account.&lt;/li&gt;
@@ -113,25 +93,93 @@
 
 &lt;p&gt;This will download an unencrypted .sql file, which is a SQL dump of all of your database information. You can restore to your database just in case anything screws up.&lt;/p&gt;
 
-&lt;h3 id=&quot;change-your-password&quot;&gt;3. Change your password.&lt;/h3&gt;
+&lt;h3 id=&quot;change-your-password&quot;&gt;2. Change your password.&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://my.bluehost.com/cgi/home&lt;/code&gt; and log in if you aren’t already.&lt;/li&gt;
-  &lt;li&gt;Click on the sub-menu &lt;code class=&quot;highlighter-rouge&quot;&gt;databases&lt;/code&gt;:&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on the sub-menu &lt;code class=&quot;highlighter-rouge&quot;&gt;databases&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;../images/20160615/Screen Shot 2016-06-15 at 4.58.07 PM.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Scroll down and you will see a list of “Current Databases.” These are all the databases under your account. One of these should match the &lt;code class=&quot;highlighter-rouge&quot;&gt;DB_NAME&lt;/code&gt; value that you pulled from &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Under the “Privileged Users” column, find the name associated with the Database that you want to change.&lt;/li&gt;
+  &lt;li&gt;Continue scrolling and you’ll see a list of “Current Users.” Find the name of the “Privileged User” for your database (this is the user from step 4; this should match the &lt;code class=&quot;highlighter-rouge&quot;&gt;DB_USER&lt;/code&gt; name from your &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt; file).&lt;/li&gt;
+  &lt;li&gt;Click “Set Password” for your database user.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bluehost will direct you to a page where you rename the password for that user. They will also give you a password generator, which I suggest you use:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;../images/20160615/Screen Shot 2016-12-10 at 2.47.50 PM.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After generating a new password, make sure to &lt;strong&gt;copy and paste it to a safe, secure place&lt;/strong&gt; so that you can refer to it whenever you need it again.&lt;/li&gt;
+  &lt;li&gt;Paste your newly-generated password in the “Password” and “Password (Again)” fields. The “Strength” indicator should be green and say “Very Strong.”&lt;/li&gt;
+  &lt;li&gt;Click “Change Password.”&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/20160615/Screen Shot 2016-06-15 at 4.58.07 PM.png&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;optional-step-reload-your-site&quot;&gt;3. Optional Step: Reload your site.&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Scroll down and you will see a list of “Current Databases.” These are all the databases under your account.&lt;/li&gt;
-  &lt;li&gt;Continue scrolling and you’ll see a list of “Current Users.” More than likely, the name after the underscore will match one of your DB names. In this case, that’s the user that was created when Bluehost initially configured your site.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;At this point, you could check your progress by attempting to reload your WordPress website. You don’t really need to, so if you just want to finish the process, jump ahead to the next step.&lt;/p&gt;
 
-&lt;p&gt;(…to be continued…)&lt;/p&gt;
+&lt;p&gt;However, if you decide to reload your site, you should only see one message:&lt;/p&gt;
+
+&lt;p&gt;“Error connecting to database”&lt;/p&gt;
+
+&lt;p&gt;This is actually good! (At least, at this point in time.) This means that your WordPress site – the database “user” – is trying to connect to your MySQL database with the &lt;em&gt;old&lt;/em&gt; password. But the database is refusing the connection because it expects the “user” to be submitting the &lt;em&gt;new&lt;/em&gt; password.&lt;/p&gt;
+
+&lt;p&gt;So let’s make sure the user is submitting the new password.&lt;/p&gt;
+
+&lt;h3 id=&quot;update-your-wp-config-file&quot;&gt;4. Update your wp-config file.&lt;/h3&gt;
+
+&lt;p&gt;Now, &lt;strong&gt;make a copy&lt;/strong&gt; of your original &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt; file. You will need to reference the original just in case something goes wrong!&lt;/p&gt;
+
+&lt;p&gt;Find the line that says &lt;code class=&quot;highlighter-rouge&quot;&gt;define('DB_PASSWORD', 'database_password');&lt;/code&gt; (line 9 in the example below):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;...
+/** The name of the database for WordPress */
+define('DB_NAME', 'database_name');
+
+/** MySQL database username */
+define('DB_USER', 'database_username');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'database_password');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
+...&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;database_password&lt;/code&gt; value to the new password that you created in step 7 above. Re-upload the &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt; file and overwrite the existing one. &lt;strong&gt;Remember to upload it to the correct directory if you have multiple Bluehost users!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;confirming-its-all-good&quot;&gt;Confirming It’s All Good&lt;/h2&gt;
+
+&lt;p&gt;Now go to the homepage of your Bluehost-hosted website. Do a hard refresh of your site (&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl + F5&lt;/code&gt; on Windows and Linux, &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd + shift + R&lt;/code&gt; on Mac) to clear the site cache. This ensures that the server re-processes and re-serves all of that page’s content. If you followed all the steps above, it should load exactly like it did before – except now, your site is using the new password to access your MySQL database! Huzzah!&lt;/p&gt;
+
+&lt;h1 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h1&gt;
+
+&lt;p&gt;One of the major frustrations about this process is when you change the password of your database user in Bluehost’s control panel, it doesn’t automatically update your &lt;code class=&quot;highlighter-rouge&quot;&gt;wp-config.php&lt;/code&gt; file with the changes. There is probably a good reason for this (after all, you don’t want your Bluehost control panel taking over your WordPress back-end), but its a good example of one of the many nuances of managing a WordPress site. Every time you update something that your site depends on, but is actually independent of your site (such as the MySQL database), you need to make sure you don’t forget to update the associated setting in your site config.&lt;/p&gt;
+
+&lt;p&gt;That’s it! I’d love to hear from you if you found this guide helpful.&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Jun 2016 18:55:59 -0500</pubDate>
         <link>http://burge.io/how-to-change-your-mysql-password-on-bluehost</link>
         <guid isPermaLink="true">http://burge.io/how-to-change-your-mysql-password-on-bluehost</guid>
+        
+        <category>bluehost</category>
+        
+        <category>mysql</category>
         
         
         <category>Databases</category>
