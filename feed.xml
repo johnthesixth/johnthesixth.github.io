@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>John Burge | Software Engineeer</title>
-    <description>The personal website and blog of John Burge, Software Engineer in Austin, Texas. Specializing in Ruby on Rails, Internet things, and smart-alec-ness.
+    <description>The personal website and blog of John Burge, Software Engineer in Austin, Texas.
 </description>
-    <link>http://burge.io/</link>
-    <atom:link href="http://burge.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Dec 2016 15:44:01 -0600</pubDate>
-    <lastBuildDate>Sat, 10 Dec 2016 15:44:01 -0600</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 30 Jan 2018 22:48:37 -0600</pubDate>
+    <lastBuildDate>Tue, 30 Jan 2018 22:48:37 -0600</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -174,8 +174,8 @@ define('DB_HOST', 'localhost');
 &lt;p&gt;That’s it! I’d love to hear from you if you found this guide helpful.&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Jun 2016 18:55:59 -0500</pubDate>
-        <link>http://burge.io/how-to-change-your-mysql-password-on-bluehost</link>
-        <guid isPermaLink="true">http://burge.io/how-to-change-your-mysql-password-on-bluehost</guid>
+        <link>http://localhost:4000/how-to-change-your-mysql-password-on-bluehost</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-change-your-mysql-password-on-bluehost</guid>
         
         <category>bluehost</category>
         
